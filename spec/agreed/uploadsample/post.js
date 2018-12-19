@@ -1,15 +1,15 @@
 module.exports = {
   request: {
-    path: '/uploadsample',
-    method: 'POST',
+    path: "/uploadsample",
+    method: "POST",
     body: {
-      path: '{:path}'
+      path: "{:path}",
     },
     values: {
-      path: '/public/hoge'
-    }
+      path: "/public/hoge",
+    },
   },
   response: {
-    status: 201
-  }
-}
+    status: 201,
+  },
+};

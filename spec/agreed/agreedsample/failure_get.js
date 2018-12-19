@@ -1,20 +1,20 @@
 module.exports = {
   request: {
-    path: '/agreedsample',
-    method: 'GET',
+    path: "/agreedsample",
+    method: "GET",
     query: {
-      status: '{:status}'
-    }
+      status: "{:status}",
+    },
   },
   response: {
-    status: '{:status}',
+    status: "{:status}",
     body: {
       results: {
-        text: '{:text}'
-      }
+        text: "{:text}",
+      },
     },
     values: {
-      text: 'Hello world'
-    }
-  }
-}
+      text: "Hello world",
+    },
+  },
+};

@@ -1,16 +1,16 @@
 module.exports = {
   request: {
-    path: '/agreedsample',
-    method: 'GET'
+    path: "/agreedsample",
+    method: "GET",
   },
   response: {
     body: {
       results: {
-        text: '{:text}'
-      }
+        text: "{:text}",
+      },
     },
     values: {
-      text: 'Hello world'
-    }
-  }
-}
+      text: "Hello world",
+    },
+  },
+};

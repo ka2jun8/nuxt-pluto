@@ -1,26 +1,26 @@
 module.exports = {
   request: {
-    path: '/beauty/search/:id',
-    method: 'GET'
+    path: "/beauty/search/:id",
+    method: "GET",
   },
   response: {
     body: {
       results: {
         search: [
           {
-            name: '{:name}',
+            name: "{:name}",
             urls: {
-              pc: '{:pc}',
-              mobile: '{:mobile}'
-            }
-          }
-        ]
-      }
+              pc: "{:pc}",
+              mobile: "{:mobile}",
+            },
+          },
+        ],
+      },
     },
     values: {
-      name: 'サロン',
-      pc: '/public/cat_large.jpeg',
-      mobile: '/public/cat_small.jpeg'
-    }
-  }
-}
+      name: "サロン",
+      pc: "/public/cat_large.jpeg",
+      mobile: "/public/cat_small.jpeg",
+    },
+  },
+};
