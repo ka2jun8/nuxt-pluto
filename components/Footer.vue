@@ -1,14 +1,18 @@
 <template>
   <div class="footer-root">
-    <div>access counter: 1</div>
+    <Counter />
     <div class="today">2018/12/19</div>
   </div>
 </template>
 
 <script>
+import Counter from "./Counter";
 export default {
-  mounted() {}
-}
+  components: {
+    Counter,
+  },
+  mounted() {},
+};
 </script>
 
 <style lang="scss" scoped>

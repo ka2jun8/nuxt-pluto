@@ -7,8 +7,12 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
-<style>
+<style lang="scss" scoped>
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
 </style>

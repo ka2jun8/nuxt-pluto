@@ -11,8 +11,17 @@
           :key="index"
           class="item">
           <nuxt-link 
+            v-if="link.to === location"
             :to="link.to"
-            class="link">{{ link.label }}</nuxt-link>
+            class="link-selected">
+            {{ link.label }}
+          </nuxt-link>
+          <nuxt-link
+            v-else
+            :to="link.to"
+            class="link">
+            {{ link.label }}
+          </nuxt-link>
         </li>
       </ul>
     </nav>
@@ -23,21 +32,22 @@
 export default {
   data() {
     return {
+      location: $nuxt.$route.path,
       links: [
-        { key: 'home', to: '/', label: 'Home', index: true },
-        { key: 'foo', to: '/foo', label: 'Foo' },
-        { key: 'bar', to: '/bar', label: 'Bar' },
-        { key: 'agreedsample', to: '/agreedsample', label: 'AgeedSample' },
-        { key: 'uploadsample', to: '/uploadsample', label: 'UploadSample' },
-        { key: 'search', to: '/search', label: 'Search' },
-        { key: 'largeform', to: '/largeform', label: 'LargeForm' },
-        { key: 'hacker-news', to: '/hn', label: 'HackerNews' },
-        { key: 'login', to: '/login', label: 'Login' },
-        { key: 'logout', to: '/logout', label: 'Logout' }
-      ]
-    }
-  }
-}
+        { key: "home", to: "/", label: "Home", index: true },
+        { key: "foo", to: "/foo", label: "Foo" },
+        { key: "bar", to: "/bar", label: "Bar" },
+        { key: "agreedsample", to: "/agreedsample", label: "AgeedSample" },
+        { key: "uploadsample", to: "/uploadsample", label: "UploadSample" },
+        { key: "search", to: "/search", label: "Search" },
+        { key: "largeform", to: "/largeform", label: "LargeForm" },
+        { key: "hacker-news", to: "/hn", label: "HackerNews" },
+        { key: "login", to: "/login", label: "Login" },
+        { key: "logout", to: "/logout", label: "Logout" },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -64,6 +74,15 @@ export default {
 }
 
 .link {
+  display: block;
+  padding: 12px 0;
+  background-color: lightgray;
+  &:hover {
+    background-color: darkgray;
+  }
+}
+
+.link-selected {
   display: block;
   padding: 12px 0;
   background-color: grey;
