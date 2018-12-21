@@ -1,7 +1,7 @@
 const express = require("express");
 const consola = require("consola");
 const { Nuxt, Builder } = require("nuxt");
-const axios = require("axios");
+const apiGateway = require("./services");
 const app = express();
 const host = process.env.HOST || "127.0.0.1";
 const port = process.env.PORT || 3000;
@@ -22,10 +22,8 @@ async function start() {
     await builder.build();
   }
 
-  app.use("/api", async (req, res, next) => {
-    const result = await axios.get(`http://localhost:3010${req.path}`);
-    res.send(result.data);
-  });
+  // API handler
+  app.use("/api", apiGateway);
 
   // Give nuxt middleware to express
   app.use(nuxt.render);
