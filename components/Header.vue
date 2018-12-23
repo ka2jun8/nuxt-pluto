@@ -47,6 +47,11 @@ export default {
       ],
     };
   },
+  watch: {
+    $route: function() {
+      this.location = $nuxt.$route.path;
+    },
+  },
 };
 </script>
 
