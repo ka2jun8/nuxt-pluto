@@ -8,9 +8,6 @@ function apiGateway() {
   }, {});
 
   return async (req, res, next) => {
-    if (!apiList || apiList.length <= 0) {
-      next();
-    }
     const promises = Object.keys(apiList).map(async path => {
       if (req.path === path) {
         const s = apiList[path];
