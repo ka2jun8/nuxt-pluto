@@ -8,19 +8,24 @@ function apiGateway() {
   }, {});
 
   return async (req, res, next) => {
+    if (!apiList || apiList.length <= 0) {
+      next();
+    }
     const promises = Object.keys(apiList).map(async path => {
       if (req.path === path) {
         const s = apiList[path];
         if (req.method === "GET") {
-          await s.get(res);
+          return await s.get(res);
         } else if (req.method === "POST") {
-          await s.post(res);
+          return await s.post(res);
         }
         // other methods
       }
     });
-    const results = await Promise.all(promises);
-    next();
+    const result = await Promise.race(promises);
+    if (!result) {
+      next();
+    }
   };
 }
 
