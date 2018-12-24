@@ -1,10 +1,14 @@
-const axios = require("axios");
-const API_HOST = "http://localhost:3010";
+const { read } = require("../util");
 
-async function AgreedSample(req, res, next) {
-  const path = "agreedsample";
-  const result = await axios.get(`${API_HOST}/${path}`);
-  res.send(result.data);
+class AgreedSample {
+  constructor() {
+    this.path = "/agreedsample";
+  }
+
+  async get(res) {
+    const result = await read(this.path);
+    return res.send(result.data);
+  }
 }
 
 module.exports = AgreedSample;

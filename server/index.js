@@ -1,7 +1,7 @@
 const express = require("express");
 const consola = require("consola");
 const { Nuxt, Builder } = require("nuxt");
-const apiGateway = require("./services");
+const apiGateway = require("./middleware/apiGateway");
 const app = express();
 const host = process.env.HOST || "127.0.0.1";
 const port = process.env.PORT || 3000;
@@ -23,7 +23,7 @@ async function start() {
   }
 
   // API handler
-  app.use("/api", apiGateway);
+  app.use("/api", apiGateway());
 
   // Give nuxt middleware to express
   app.use(nuxt.render);
