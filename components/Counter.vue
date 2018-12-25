@@ -14,6 +14,11 @@ export default {
       return this.$store.state.counter.count;
     },
   },
+  watch: {
+    $route: function() {
+      this.increment();
+    },
+  },
   mounted() {
     this.$store.dispatch("counter/increment");
   },

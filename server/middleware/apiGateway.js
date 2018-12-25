@@ -19,7 +19,8 @@ function apiGateway() {
         // other methods
       }
     });
-    const result = await Promise.race(promises);
+    const results = await Promise.all(promises);
+    const result = results.filter(r => !!r);
     if (!result) {
       next();
     }

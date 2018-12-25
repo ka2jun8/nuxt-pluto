@@ -9,13 +9,15 @@ export const getters = {
 };
 
 export const actions = {
-  increment(context) {
-    context.commit("increment");
+  async increment(context) {
+    const res = await this.$axios.post("/api/counter");
+    console.log("increment", { res });
+    context.commit("increment", res.data);
   },
 };
 
 export const mutations = {
-  increment(state) {
-    state.count++;
+  increment(state, data) {
+    state.count = data.counter;
   },
 };
