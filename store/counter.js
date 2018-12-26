@@ -11,7 +11,6 @@ export const getters = {
 export const actions = {
   async increment(context) {
     const res = await this.$axios.post("/api/counter");
-    console.log("increment", { res });
     context.commit("increment", res.data);
   },
 };
