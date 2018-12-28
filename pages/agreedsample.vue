@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      text: "a",
+      text: "",
     };
   },
   async asyncData({ app }) {
