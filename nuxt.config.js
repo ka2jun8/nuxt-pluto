@@ -1,7 +1,7 @@
 const pkg = require("./package");
 
 module.exports = {
-  mode: "spa",
+  mode: "universal",
 
   /*
   ** Headers of the page
@@ -44,6 +44,10 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+  },
+
+  router: {
+    middleware: "route",
   },
 
   /*

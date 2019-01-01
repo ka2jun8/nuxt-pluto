@@ -32,7 +32,6 @@
 export default {
   data() {
     return {
-      location: $nuxt.$route.path,
       links: [
         { key: "home", to: "/", label: "Home", index: true },
         { key: "foo", to: "/foo", label: "Foo" },
@@ -47,9 +46,14 @@ export default {
       ],
     };
   },
+  computed: {
+    location() {
+      return this.$store.state.location;
+    },
+  },
   watch: {
     $route: function() {
-      this.location = $nuxt.$route.path;
+      this.$store.dispatch("change", $nuxt.$route.path);
     },
   },
 };
