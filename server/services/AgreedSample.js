@@ -5,7 +5,7 @@ class AgreedSample {
     this.path = "/agreedsample";
   }
 
-  async get(res) {
+  async get(req, res) {
     const result = await read(this.path);
     return res.send(result.data);
   }

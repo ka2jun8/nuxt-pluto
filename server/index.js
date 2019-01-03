@@ -1,5 +1,7 @@
 const express = require("express");
 const consola = require("consola");
+const bodyParser = require("body-parser");
+const session = require("express-session");
 const { Nuxt, Builder } = require("nuxt");
 const apiGateway = require("./middleware/apiGateway");
 const app = express();
@@ -21,6 +23,16 @@ async function start() {
     const builder = new Builder(nuxt);
     await builder.build();
   }
+
+  app.use(bodyParser.json());
+  app.use(
+    session({
+      secret: "nuxt-pluto",
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 60000 },
+    })
+  );
 
   // API handler
   app.use("/api", apiGateway());

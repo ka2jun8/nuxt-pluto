@@ -12,9 +12,9 @@ function apiGateway() {
       if (req.path === path) {
         const s = apiList[path];
         if (req.method === "GET") {
-          return await s.get(res);
+          return await s.get(req, res);
         } else if (req.method === "POST") {
-          return await s.post(res);
+          return await s.post(req, res);
         }
         // other methods
       }

@@ -4,7 +4,7 @@ class Counter {
     this.counter = 0;
   }
 
-  async post(res) {
+  async post(req, res) {
     this.counter++;
     return res.send({ counter: this.counter });
   }
