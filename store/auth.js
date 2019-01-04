@@ -3,11 +3,6 @@ export const state = () => ({
 });
 
 export const actions = {
-  nuxtServerInit({ commit }, { req }) {
-    if (req.session && req.session.auth) {
-      commit("SET_USER", req.session.auth);
-    }
-  },
   async login(context, data) {
     try {
       const res = await this.$axios.post("/api/login", {
