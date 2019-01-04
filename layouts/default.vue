@@ -1,8 +1,14 @@
 <template>
   <div>
-    <Header/>
-    <nuxt/>
-    <Footer/>
+    <div class="header">
+      <Header/>
+    </div>
+    <div class="main">
+      <nuxt/>
+    </div>
+    <div>
+      <Footer/>
+    </div>
   </div>
 </template>
 
@@ -36,5 +42,14 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.header {
+  position: fixed;
+  z-index: 1;
+}
+
+.main {
+  padding-top: 200px;
 }
 </style>
