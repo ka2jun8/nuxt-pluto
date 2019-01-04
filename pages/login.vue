@@ -54,6 +54,7 @@ export default {
         await this.$store.dispatch("auth/login", {
           username: this.formUsername,
           password: this.formPassword,
+          redirect: this.$route.query,
         });
         this.formUsername = "";
         this.formPassword = "";
