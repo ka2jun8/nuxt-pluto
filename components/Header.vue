@@ -1,8 +1,8 @@
 <template>
   <div class="header-root">
     <hgroup>
-      <h1 class="service-logo">REDUX PLUTO</h1>
-      <h2 class="corporate-logo">PRODUCED by RECRUIT</h2>
+      <h1 class="service-logo">NUXT PLUTO</h1>
+      <h2 class="corporate-logo">PRODUCED by KA2JUN8</h2>
     </hgroup>
     <nav>
       <ul class="items">
