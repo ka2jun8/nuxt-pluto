@@ -1,4 +1,5 @@
-const { read } = require("../util");
+const axios = require("axios");
+const { API_BASE } = require("../config");
 
 class AgreedSample {
   constructor() {
@@ -6,7 +7,7 @@ class AgreedSample {
   }
 
   async get(req, res) {
-    const result = await read(this.path);
+    const result = await axios.get(`${API_BASE}${this.path}`);
     return res.send(result.data);
   }
 }

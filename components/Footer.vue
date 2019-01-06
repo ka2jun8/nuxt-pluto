@@ -8,6 +8,7 @@
 <script>
 import Counter from "./Counter";
 export default {
+  name: "Footer",
   components: {
     Counter,
   },
