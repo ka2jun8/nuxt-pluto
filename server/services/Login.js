@@ -10,7 +10,7 @@ class Login {
 
     // TODO validate
 
-    if (username !== "scott" && password !== "tiger") {
+    if (username !== "scott@example.com" && password !== "tiger") {
       return res.status(401).send({ error: "Invalid username or password" });
     }
 
