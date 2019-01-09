@@ -21,6 +21,7 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "multer": "^1.4.1",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
