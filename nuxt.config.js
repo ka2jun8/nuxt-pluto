@@ -47,7 +47,7 @@ module.exports = {
   },
 
   router: {
-    middleware: "route",
+    middleware: ["route"],
   },
 
   /*
