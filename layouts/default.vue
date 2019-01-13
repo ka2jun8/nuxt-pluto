@@ -45,7 +45,6 @@ html {
 }
 
 .header {
-  position: fixed;
   z-index: 1;
 }
 
