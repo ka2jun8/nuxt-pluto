@@ -6,20 +6,17 @@
 
 <script>
 export default {
-  data() {
-    return {
-      text: "",
-    };
+  // asyncDataはnuxt generateでうまく動かないのでvuexで取得
+  computed: {
+    loading() {
+      return this.$store.state.agreedsample.loading;
+    },
+    text() {
+      return this.$store.state.agreedsample.text;
+    },
   },
-  async asyncData({ app }) {
-    try {
-      const result = await app.$axios.get("/api/agreedsample");
-      return {
-        text: result.data.results.text,
-      };
-    } catch (e) {
-      console.error(e);
-    }
+  mounted() {
+    this.$store.dispatch("agreedsample/getText");
   },
 };
 </script>
