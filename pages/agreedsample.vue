@@ -12,10 +12,14 @@ export default {
     };
   },
   async asyncData({ app }) {
-    const result = await app.$axios.get("/api/agreedsample");
-    return {
-      text: result.data.results.text,
-    };
+    try {
+      const result = await app.$axios.get("/api/agreedsample");
+      return {
+        text: result.data.results.text,
+      };
+    } catch (e) {
+      console.error(e);
+    }
   },
 };
 </script>

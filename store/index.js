@@ -4,7 +4,7 @@ export const state = () => ({
 
 export const actions = {
   nuxtServerInit({ commit }, { req }) {
-    if (req.session && req.session.auth) {
+    if (req && req.session && req.session.auth) {
       commit("auth/SET_USER", req.session.auth);
     }
   },
