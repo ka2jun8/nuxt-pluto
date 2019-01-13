@@ -47,8 +47,4 @@ html {
 .header {
   z-index: 1;
 }
-
-.main {
-  padding-top: 200px;
-}
 </style>
