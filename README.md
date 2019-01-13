@@ -1,22 +1,31 @@
 # nuxt-pluto
 
-> My extraordinary Nuxt.js project
+Boilerplate for nuxt projects
+
+Inspired by [Redux-pluto](https://github.com/recruit-tech/redux-pluto)
+
+Include basic features:
+- SSR
+- Auth
+- Vuex
+- Mock API ([agreed](https://github.com/recruit-tech/agreed))
+- etc...
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ yarn install
+$ npm install
 
 # serve with hot reload at localhost:3000
-$ yarn run dev
+$ npm run dev
 
 # build for production and launch server
-$ yarn run build
-$ yarn start
+$ npm run build
+$ npm run start
 
 # generate static project
-$ yarn run generate
+$ npm run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
