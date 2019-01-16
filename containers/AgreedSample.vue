@@ -16,9 +16,6 @@ export default {
   computed: {
     ...mapState("agreedsample", ["loading", "text"]),
   },
-  mounted() {
-    this.$store.dispatch("agreedsample/getText");
-  },
 };
 </script>
 
