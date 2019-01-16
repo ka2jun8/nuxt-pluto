@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import Counter from "./Counter";
+import Counter from "../containers/Counter";
+
 export default {
   name: "Footer",
   components: {
     Counter,
   },
-  mounted() {},
 };
 </script>
 

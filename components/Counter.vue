@@ -1,30 +1,24 @@
 <template>
   <div 
     class="root" 
-    @click="increment">
+    @click="onclick">
     access counter: {{ counterValue || "" }}
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "Counter",
-  computed: {
-    counterValue() {
-      return this.$store.state.counter.count;
+  props: {
+    counterValue: {
+      type: Number,
+      required: true,
     },
-  },
-  watch: {
-    $route: function() {
-      this.increment();
-    },
-  },
-  mounted() {
-    this.$store.dispatch("counter/increment");
-  },
-  methods: {
-    increment() {
-      this.$store.dispatch("counter/increment");
+    onclick: {
+      type: Function,
+      required: true,
     },
   },
 };
