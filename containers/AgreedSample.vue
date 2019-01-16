@@ -1,18 +1,20 @@
 <template>
-  <AgreedSample />
+  <AgreedSample 
+    :text="text"
+  />
 </template>
 
 <script>
 import { mapState } from "vuex";
-import AgreedSample from "../containers/AgreedSample";
+import AgreedSample from "../components/AgreedSample";
 
 export default {
-  name: "AgreedSamplePage",
+  name: "AgreedSampleContainer",
   components: {
     AgreedSample,
   },
-  async fetch({ store }) {
-    return store.dispatch("agreedsample/getText");
+  computed: {
+    ...mapState("agreedsample", ["loading", "text"]),
   },
 };
 </script>
