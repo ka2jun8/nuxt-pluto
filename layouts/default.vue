@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Header from "~/components/Header";
+import Header from "~/containers/Header";
 import Footer from "~/components/Footer";
 
 export default {

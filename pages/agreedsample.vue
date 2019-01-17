@@ -1,5 +1,5 @@
 <template>
-  <AgreedSample />
+  <agreed-sample />
 </template>
 
 <script>

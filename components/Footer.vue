@@ -1,6 +1,6 @@
 <template>
   <div class="footer-root">
-    <Counter />
+    <counter />
     <div class="today">2018/12/19</div>
   </div>
 </template>
