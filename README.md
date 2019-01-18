@@ -15,17 +15,17 @@ Include basic features:
 
 ``` bash
 # install dependencies
-$ npm install
+$ yarn install
 
 # serve with hot reload at localhost:3000
-$ npm run start
+$ yarn start
 
 # build for production and launch server
-$ npm run build
-$ npm run start:prod
+$ yarn build
+$ yarn start:prod
 
 # generate static project
-$ npm run generate
+$ yarn generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
