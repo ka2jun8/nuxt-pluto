@@ -22,7 +22,7 @@
 export default {
   data() {
     return {
-      items: new Array(500).fill(null).map((k, i) => ({ message: `aaa${i}` })),
+      items: [...new Array(500)].map((k, i) => ({ message: `aaa${i}` })),
     };
   },
 };
