@@ -1,23 +1,19 @@
 <template>
-  <div class="container">
-    {{ item.name }}
-    <a 
-      :href="item.urls && item.urls.pc" 
-      target="blank">
-      詳細のページヘ行く
-    </a>
-  </div>
+  <search />
 </template>
 
 <script>
+import Search from "../../containers/Search";
+
 export default {
-  computed: {
-    item() {
-      return this.$store.state.search.item;
-    },
+  components: {
+    Search,
   },
-  mounted() {
-    this.$store.dispatch("search/fetchItem", this.$route.params.id);
+  async fetch({ store, route }) {
+    const { id } = route.params;
+    if (keyword) {
+      return store.dispatch("search/fetchItem", id);
+    }
   },
 };
 </script>

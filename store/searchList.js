@@ -59,5 +59,5 @@ function canGetPrev(page) {
 
 function createPages(count) {
   const maxPage = count / SEARCH_MAX_COUNT;
-  return new Array(maxPage).fill(null).map((n, p) => p);
+  return [...new Array(maxPage)].map((n, p) => p);
 }
