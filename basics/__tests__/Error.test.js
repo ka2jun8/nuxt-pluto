@@ -9,4 +9,8 @@ describe("Error.vue", () => {
     const wrapper = shallowMount(ErrorComponent, { propsData });
     expect(wrapper.props()).toEqual(propsData);
   });
+  it("snapshot", () => {
+    const wrapper = shallowMount(ErrorComponent, { propsData });
+    expect(wrapper.vm.$el).toMatchSnapshot();
+  });
 });
