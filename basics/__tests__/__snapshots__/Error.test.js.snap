@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error.vue snapshot 1`] = `
+<p
+  class="error"
+>
+  
+  this is error test
+
+</p>
+`;
