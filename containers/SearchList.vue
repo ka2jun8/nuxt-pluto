@@ -32,7 +32,6 @@ const PAGE_WINDOW = 20;
 
 export default {
   name: "SearchListContainer",
-  middleware: "auth",
   components: {
     SearchForm,
     SearchList,

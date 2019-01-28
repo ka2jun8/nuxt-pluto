@@ -9,6 +9,7 @@ export default {
   components: {
     SearchList,
   },
+  middleware: "auth",
   watchQuery: ["page", "keyword"],
   async fetch({ store, route }) {
     const { page, keyword } = route.query;
