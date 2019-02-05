@@ -1,17 +1,23 @@
 <template>
   <div class="footer-root">
     <counter />
-    <div class="today">2018/12/19</div>
+    <div class="today">{{ date }}</div>
   </div>
 </template>
 
 <script>
+import format from "date-fns/format";
 import Counter from "../containers/Counter";
 
 export default {
   name: "Footer",
   components: {
     Counter,
+  },
+  data() {
+    return {
+      date: format(new Date(), "YYYY/MM/DD"),
+    };
   },
 };
 </script>
