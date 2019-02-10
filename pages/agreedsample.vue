@@ -11,6 +11,18 @@ export default {
   components: {
     AgreedSample,
   },
+  head() {
+    return {
+      title: "Agreed sample page",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Agreed sample page",
+        },
+      ],
+    };
+  },
   async fetch({ store }) {
     return store.dispatch("agreedsample/getText");
   },

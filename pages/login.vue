@@ -9,5 +9,17 @@ export default {
   components: {
     Login,
   },
+  head() {
+    return {
+      title: "Login page",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Login page",
+        },
+      ],
+    };
+  },
 };
 </script>
