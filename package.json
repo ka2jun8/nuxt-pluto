@@ -26,12 +26,12 @@
     "express": "^4.16.3",
     "express-session": "^1.15.6",
     "multer": "^1.4.1",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.8.0",
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.28",
-    "agreed": "^3.2.1",
+    "agreed": "^3.2.2",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^23.6.0",
     "babel-preset-vue-app": "^2.0.0",
